@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    padding: 10px;
+}
+
+body form{
+    margin-left: 100px
+}
+
+form{
+    background-color: rgba(0, 0, 0, 0.229);
+    left: 100px;
+    width: 400px;
+    height: 500px;
+    border-radius: 20px;
+    align-content: center;
+    justify-items: center;
+    gap: 10px;
+    margin: 100px;
+    margin-bottom: 100px;
+}
+
+form .form-control{
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+form .mb-3 {
+    padding: 20px;
+}
+
+.form-text{ 
+    position: absolute;
+    bottom: -20px;
+}
+
+
+.mb-2 ::placeholder{
+    font-size: 40px;
+    justify-content: center;
+
+    
+}
+
+.mb-2 img{
+    width: 21px;
+    position: absolute;
+    left: 419px;
+    margin-top: -32px;
+    opacity: 0.8;
+}
+
+.log-in-up{
+    margin-bottom: 70px;
+}
+
+.log-in-up a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.708);
+
+}
+
+.log-in-up h2{
+    margin-left: 19px;
+}
+
+
