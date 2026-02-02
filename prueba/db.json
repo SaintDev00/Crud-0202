@@ -1,0 +1,61 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fullName": "Dr. Sarah Jenkins",
+      "email": "admin@crudtask.edu",
+      "password": "password",
+      "role": "admin",
+      "department": "Computer Science",
+      "phone": "+1 (555) 123-4567",
+      "employeeId": "CZ-882103",
+      "joinDate": "2020-09-14"
+    },
+    {
+      "id": 2,
+      "fullName": "Alex Morgan",
+      "email": "alex@crudtask.edu",
+      "password": "password",
+      "role": "user",
+      "department": "Product Design",
+      "phone": "+1 (555) 987-6543",
+      "employeeId": "CZ-882104",
+      "joinDate": "2021-03-22"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Advanced Calculus Finals Prep",
+      "category": "Mathematics",
+      "priority": "High",
+      "status": "Pending",
+      "description": "Prepare final exam materials",
+      "dueDate": "2024-12-15",
+      "userId": 2,
+      "assignee": "Alex Morgan"
+    },
+    {
+      "id": 2,
+      "title": "Update Documentation",
+      "category": "Computer Science",
+      "priority": "Medium",
+      "status": "In Progress",
+      "description": "Update system documentation",
+      "dueDate": "2024-11-20",
+      "userId": 1,
+      "assignee": "Sarah Lin"
+    },
+    {
+      "id": 3,
+      "title": "Physics Lab Report: Quantum Mechanics",
+      "category": "Physics",
+      "priority": "Medium",
+      "status": "Completed",
+      "description": "Complete lab report",
+      "dueDate": "2024-11-10",
+      "userId": 2,
+      "assignee": "Alex Morgan"
+    }
+  ]
+}
