@@ -56,11 +56,11 @@ class Auth {
             const user = users[0];
 
             if (user.password === password) {
-                // Guardar sesión
+                // Save sesion
                 localStorage.setItem('user', JSON.stringify(user));
                 localStorage.setItem('isLoggedIn', 'true');
                 
-                // Redirigir según rol
+                // redirection acording to role
                 this.redirectBasedOnRole(user.role);
             } else {
                 this.showAlert('Contraseña incorrecta', 'danger');
@@ -87,7 +87,7 @@ class Auth {
             return;
         }
 
-        // Verificar si el usuario ya existe
+        // Verify if the user exists
         try {
             const response = await fetch(`${this.API_URL}/users?email=${email}`);
             const existingUsers = await response.json();
@@ -97,7 +97,7 @@ class Auth {
                 return;
             }
 
-            // Crear nuevo usuario
+            // Create new user
             const newUser = {
                 fullName,
                 email,
@@ -130,7 +130,7 @@ class Auth {
     }
 
     showAlert(message, type) {
-        // Crear alerta Bootstrap
+        // Create alert w' bootstrap
         const alertDiv = document.createElement('div');
         alertDiv.className = `alert alert-${type} alert-dismissible fade show position-fixed`;
         alertDiv.style.top = '20px';
@@ -143,7 +143,7 @@ class Auth {
         
         document.body.appendChild(alertDiv);
         
-        // Auto-remover después de 5 segundos
+        // Auto-remove after five seconds
         setTimeout(() => {
             alertDiv.remove();
         }, 5000);
@@ -156,11 +156,11 @@ class Auth {
     }
 }
 
-// Inicializar cuando el DOM esté listo
+// initialize when dom is ready
 document.addEventListener('DOMContentLoaded', () => {
     new Auth();
     
-    // Manejar logout
+    // Drive logout
     const logoutBtn = document.getElementById('logoutBtn');
     if (logoutBtn) {
         logoutBtn.addEventListener('click', (e) => {

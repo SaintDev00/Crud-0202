@@ -20,7 +20,7 @@ class AdminDashboard {
 
         this.currentUser = JSON.parse(user);
         
-        // Verificar que sea admin
+        // verify that you are admin
         if (this.currentUser.role !== 'admin') {
             window.location.href = 'tasks.html';
         }
@@ -28,11 +28,11 @@ class AdminDashboard {
 
     async loadDashboardData() {
         try {
-            // Cargar tareas
+            // Upload tasks
             const tasksResponse = await fetch(`${this.API_URL}/tasks`);
             const tasks = await tasksResponse.json();
             
-            // Cargar usuarios
+            // Upload users
             const usersResponse = await fetch(`${this.API_URL}/users`);
             const users = await usersResponse.json();
 

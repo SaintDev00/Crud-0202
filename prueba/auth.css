@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-color:  #f0f1faa5;
     padding: 1rem;
 }
 
@@ -30,15 +30,14 @@
 }
 
 .auth-card .form-control:focus {
-    border-color: #4e73df;
+    border-color: #4e72df3e;
     box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
 }
 
 .auth-card .btn-primary {
     padding: 0.75rem;
     font-weight: 600;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border: none;
+    background-color: #1778FF;
 }
 
 .auth-card .btn-primary:hover {
@@ -49,4 +48,14 @@
 .auth-card a {
     color: #4e73df;
     font-weight: 600;
+}
+
+
+.card shadow .br{
+    position: absolute;
+    margin-left: 100px;
+}
+
+.formy{
+    width: 400px;
 }

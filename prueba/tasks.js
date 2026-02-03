@@ -21,7 +21,7 @@ class UserTasks {
 
         this.currentUser = JSON.parse(user);
         
-        // Si es admin, redirigir a dashboard
+        // if admin redirect to dashboard
         if (this.currentUser.role === 'admin') {
             window.location.href = 'dashboard.html';
         }
@@ -29,7 +29,7 @@ class UserTasks {
 
     async loadUserTasks() {
         try {
-            // Cargar tareas del usuario actual
+        //load current user tasks
             const response = await fetch(`${this.API_URL}/tasks?userId=${this.currentUser.id}`);
             const tasks = await response.json();
             
@@ -47,7 +47,7 @@ class UserTasks {
         tasks.forEach(task => {
             const row = document.createElement('tr');
             
-            // Determinar clase de prioridad
+            // to determine priority class
             let priorityClass = '';
             switch(task.priority) {
                 case 'High': priorityClass = 'danger'; break;
@@ -55,7 +55,7 @@ class UserTasks {
                 case 'Low': priorityClass = 'info'; break;
             }
 
-            // Determinar clase de estado
+            // determine the status class
             let statusClass = '';
             switch(task.status) {
                 case 'Completed': statusClass = 'success'; break;
@@ -91,7 +91,7 @@ class UserTasks {
             tableBody.appendChild(row);
         });
 
-        // Agregar event listeners para los selects de estado
+        //Add event listeners for state selects
         this.setupStatusChangeListeners();
     }
 
@@ -106,11 +106,11 @@ class UserTasks {
 
     async updateTaskStatus(taskId, newStatus) {
         try {
-            // Obtener la tarea actual
+            // Get the current task
             const taskResponse = await fetch(`${this.API_URL}/tasks/${taskId}`);
             const task = await taskResponse.json();
 
-            // Actualizar estado
+            // Update Status
             task.status = newStatus;
 
             await fetch(`${this.API_URL}/tasks/${taskId}`, {
@@ -171,7 +171,7 @@ class UserTasks {
                 await fetch(`${this.API_URL}/tasks/${taskId}`, {
                     method: 'DELETE'
                 });
-                this.loadUserTasks(); // Recargar datos
+                this.loadUserTasks(); // top up data
             } catch (error) {
                 console.error('Error deleting task:', error);
             }
@@ -179,12 +179,12 @@ class UserTasks {
     }
 
     editTask(taskId) {
-        // En una implementación completa, esto abriría un modal de edición
+        // In a full implementation, this would open an editing modal
         alert(`Editar tarea ${taskId} - Función en desarrollo`);
     }
 
     setupEventListeners() {
-        // Crear nueva tarea
+        // Create new task
         const createTaskBtn = document.querySelector('[data-bs-target="#createTaskModal"]');
         if (createTaskBtn) {
             createTaskBtn.addEventListener('click', () => {
@@ -192,7 +192,7 @@ class UserTasks {
             });
         }
 
-        // Guardar tarea
+        // Save task
         const saveTaskBtn = document.querySelector('.modal-footer .btn-primary');
         if (saveTaskBtn) {
             saveTaskBtn.addEventListener('click', () => {
@@ -202,7 +202,7 @@ class UserTasks {
     }
 
     showCreateTaskModal() {
-        // Resetear formulario
+        // Reset form
         const form = document.getElementById('createTaskForm');
         if (form) form.reset();
     }
@@ -232,7 +232,7 @@ class UserTasks {
                 body: JSON.stringify(taskData)
             });
 
-            // Cerrar modal y recargar
+            // Close modal and update
             const modal = bootstrap.Modal.getInstance(document.getElementById('createTaskModal'));
             modal.hide();
             this.loadUserTasks();
@@ -242,7 +242,7 @@ class UserTasks {
     }
 }
 
-// Inicializar cuando el DOM esté listo
+// Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     window.userTasks = new UserTasks();
 });

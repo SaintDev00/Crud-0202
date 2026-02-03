@@ -57,7 +57,7 @@ class AdminTasks {
             this.totalTasks = tasks.length;
             this.currentPage = page;
             
-            // Aplicar filtros
+            // Apply filters
             const searchTerm = document.getElementById('searchInput').value.toLowerCase();
             const statusFilter = document.getElementById('filterStatus').value;
             
@@ -76,7 +76,7 @@ class AdminTasks {
                 );
             }
             
-            // Paginación
+            // Pagination
             const startIndex = (page - 1) * this.itemsPerPage;
             const endIndex = startIndex + this.itemsPerPage;
             const paginatedTasks = filteredTasks.slice(startIndex, endIndex);
@@ -95,7 +95,7 @@ class AdminTasks {
         tasks.forEach(task => {
             const row = document.createElement('tr');
             
-            // Determinar clase de prioridad
+            //to determine priority class
             let priorityClass = '';
             switch(task.priority) {
                 case 'High': priorityClass = 'danger'; break;
@@ -103,7 +103,7 @@ class AdminTasks {
                 case 'Low': priorityClass = 'info'; break;
             }
 
-            // Determinar clase de estado
+            // Determine class of state
             let statusClass = '';
             switch(task.status) {
                 case 'Completed': statusClass = 'success'; break;
@@ -137,7 +137,7 @@ class AdminTasks {
             tableBody.appendChild(row);
         });
 
-        // Actualizar contadores
+        // Update counters
         document.getElementById('showingCount').textContent = tasks.length;
         document.getElementById('totalCount').textContent = this.totalTasks;
     }
@@ -150,7 +150,7 @@ class AdminTasks {
         
         pagination.innerHTML = '';
         
-        // Botón anterior
+        // previous button
         const prevLi = document.createElement('li');
         prevLi.className = `page-item ${currentPage === 1 ? 'disabled' : ''}`;
         prevLi.innerHTML = `
@@ -160,7 +160,7 @@ class AdminTasks {
         `;
         pagination.appendChild(prevLi);
         
-        // Números de página
+        // Numbers of pages
         for (let i = 1; i <= totalPages; i++) {
             const li = document.createElement('li');
             li.className = `page-item ${i === currentPage ? 'active' : ''}`;
@@ -168,7 +168,7 @@ class AdminTasks {
             pagination.appendChild(li);
         }
         
-        // Botón siguiente
+        // next button
         const nextLi = document.createElement('li');
         nextLi.className = `page-item ${currentPage === totalPages ? 'disabled' : ''}`;
         nextLi.innerHTML = `
@@ -204,11 +204,11 @@ class AdminTasks {
 
     async editTask(taskId) {
         try {
-            // Cargar datos de la tarea
+            // Charge data of the task
             const response = await fetch(`${this.API_URL}/tasks/${taskId}`);
             const task = await response.json();
             
-            // Llenar el modal con los datos
+            //fill the modal with data
             document.getElementById('modalTitle').textContent = 'Edit Task';
             document.getElementById('taskTitle').value = task.title;
             document.getElementById('taskCategory').value = task.category;
@@ -216,12 +216,12 @@ class AdminTasks {
             document.getElementById('taskStatus').value = task.status;
             document.getElementById('taskDueDate').value = task.dueDate;
             document.getElementById('taskDescription').value = task.description;
-            
-            // Guardar el ID de la tarea en un data attribute
+
+            // Save the task ID in a data attribute
             const saveBtn = document.getElementById('saveTaskBtn');
             saveBtn.dataset.taskId = taskId;
             
-            // Mostrar modal
+            // Show Modal
             const modal = new bootstrap.Modal(document.getElementById('taskModal'));
             modal.show();
         } catch (error) {
@@ -253,12 +253,12 @@ class AdminTasks {
                 body: JSON.stringify(taskId ? { id: parseInt(taskId), ...formData } : formData)
             });
 
-            // Cerrar modal y recargar
+            // Close modal and reload
             const modal = bootstrap.Modal.getInstance(document.getElementById('taskModal'));
             modal.hide();
             this.loadTasks(this.currentPage);
             
-            // Limpiar datos del modal
+            // Clean data of modal
             this.resetModal();
         } catch (error) {
             console.error('Error saving task:', error);
@@ -272,7 +272,7 @@ class AdminTasks {
     }
 
     setupEventListeners() {
-        // Buscador
+        // Finder
         const searchInput = document.getElementById('searchInput');
         if (searchInput) {
             searchInput.addEventListener('input', () => {
@@ -280,7 +280,7 @@ class AdminTasks {
             });
         }
 
-        // Filtro de estado
+        // Filter of status
         const filterStatus = document.getElementById('filterStatus');
         if (filterStatus) {
             filterStatus.addEventListener('change', () => {
@@ -288,7 +288,7 @@ class AdminTasks {
             });
         }
 
-        // Guardar tarea
+        // Save task
         const saveTaskBtn = document.getElementById('saveTaskBtn');
         if (saveTaskBtn) {
             saveTaskBtn.addEventListener('click', () => {
@@ -296,7 +296,7 @@ class AdminTasks {
             });
         }
 
-        // Resetear modal cuando se cierre
+        // Reset modal when it close
         const taskModal = document.getElementById('taskModal');
         if (taskModal) {
             taskModal.addEventListener('hidden.bs.modal', () => {
@@ -316,7 +316,7 @@ class AdminTasks {
     }
 }
 
-// Inicializar cuando el DOM esté listo
+// Initialize dom when ready
 document.addEventListener('DOMContentLoaded', () => {
     window.adminTasks = new AdminTasks();
 });
