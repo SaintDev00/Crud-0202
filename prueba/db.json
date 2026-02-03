@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "fullName": "Dr. Sarah Jenkins",
       "email": "admin@crudtask.edu",
       "password": "password",
@@ -12,7 +12,7 @@
       "joinDate": "2020-09-14"
     },
     {
-      "id": 2,
+      "id": "2",
       "fullName": "Alex Morgan",
       "email": "alex@crudtask.edu",
       "password": "password",
@@ -23,7 +23,7 @@
       "joinDate": "2021-03-22"
     },
     {
-      "id": 3,
+      "id": "3",
       "fullName": "Raj Patel",
       "email": "raj@crudtask.edu",
       "password": "password123",
@@ -36,7 +36,7 @@
   ],
   "tasks": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Advanced Calculus Finals Prep",
       "category": "Mathematics",
       "priority": "High",
@@ -47,7 +47,7 @@
       "assignee": "Raj Patel"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Update Documentation",
       "category": "Computer Science",
       "priority": "Medium",
@@ -58,29 +58,7 @@
       "assignee": "Sarah Lin"
     },
     {
-      "id": 3,
-      "title": "Physics Lab Report: Quantum Mechanics",
-      "category": "Physics",
-      "priority": "Medium",
-      "status": "Completed",
-      "description": "Complete quantum mechanics lab report with analysis",
-      "dueDate": "2024-11-10",
-      "userId": 2,
-      "assignee": "Alex Morgan"
-    },
-    {
-      "id": 4,
-      "title": "History Essay: Industrial Revolution",
-      "category": "History",
-      "priority": "Low",
-      "status": "Completed",
-      "description": "Essay on the impact of Industrial Revolution in Europe",
-      "dueDate": "2024-10-30",
-      "userId": 2,
-      "assignee": "Alex Morgan"
-    },
-    {
-      "id": 5,
+      "id": "5",
       "title": "Database Systems Project: Phase 1",
       "category": "Computer Science",
       "priority": "High",
@@ -91,7 +69,7 @@
       "assignee": "Carlos M."
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "English Lit: Modernist Poetry",
       "category": "Literature",
       "priority": "Medium",
@@ -102,7 +80,7 @@
       "assignee": "Raj Patel"
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "Fix Login Authentication",
       "category": "Computer Science",
       "priority": "High",
@@ -113,7 +91,7 @@
       "assignee": "Raj Patel"
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "Quarterly Review",
       "category": "Administration",
       "priority": "Low",
@@ -124,15 +102,48 @@
       "assignee": "Michelle O."
     },
     {
-      "id": 9,
-      "title": "Database Optimization",
-      "category": "Computer Science",
+      "id": "4b51",
+      "title": "sss",
+      "category": "Mathematics",
       "priority": "High",
       "status": "In Progress",
-      "description": "Optimize database queries and indexing",
-      "dueDate": "2024-10-25",
-      "userId": 2,
-      "assignee": "Carlos M."
+      "dueDate": "2026-02-12",
+      "description": "",
+      "userId": "2",
+      "assignee": "Alex Morgan"
+    },
+    {
+      "id": "24b0",
+      "title": "",
+      "category": "Select category...",
+      "priority": "High",
+      "status": "Pending",
+      "dueDate": "",
+      "description": "",
+      "userId": "2",
+      "assignee": "Alex Morgan"
+    },
+    {
+      "id": "ccf0",
+      "title": "",
+      "category": "Select category...",
+      "priority": "High",
+      "status": "In Progress",
+      "dueDate": "2026-02-13",
+      "description": "",
+      "userId": "2",
+      "assignee": "Alex Morgan"
+    },
+    {
+      "id": "7ca7",
+      "title": "",
+      "category": "Physics",
+      "priority": "Medium",
+      "status": "Pending",
+      "dueDate": "",
+      "description": "",
+      "userId": "2",
+      "assignee": "Alex Morgan"
     }
   ]
 }

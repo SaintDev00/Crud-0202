@@ -16,8 +16,8 @@ body {
 .sidebar {
     width: 250px;
     min-height: 100vh;
-    background: linear-gradient(180deg, var(--primary-color) 0%, #224abe 100%);
-    color: white;
+    background: white;
+    color: rgb(0, 0, 0);
     transition: all 0.3s;
     position: fixed;
     z-index: 1000;
@@ -34,7 +34,7 @@ body {
 
 .sidebar-menu a {
     display: block;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(0, 0, 0, 0.8);
     padding: 0.75rem 1.5rem;
     text-decoration: none;
     transition: all 0.3s;
@@ -42,9 +42,9 @@ body {
 
 .sidebar-menu a:hover,
 .sidebar-menu a.active {
-    color: white;
+    color: rgb(0, 0, 0);
     background-color: rgba(255, 255, 255, 0.1);
-    border-left: 4px solid white;
+    border-left: 4px solid rgb(0, 0, 0);
 }
 
 .sidebar-footer {
@@ -139,8 +139,8 @@ body {
 }
 
 .profile-header {
-            background: linear-gradient(135deg, #e9efff 0%, #2249be17 100%);
-            color: white;
+            background-color: #b0bbde;
+            color: rgb(0, 0, 0);
             padding: 2rem;
             border-radius: 0.5rem;
             margin-bottom: 2rem;
@@ -150,8 +150,8 @@ body {
             width: 100px;
             height: 100px;
             border-radius: 50%;
-            background-color: white;
-            color: #4e73df;
+            background-image: url(./multimedia/Profile\ Avatar.png);
+            background-position: center;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -176,9 +176,14 @@ body {
         }
         
         .stats-badge {
-            background-color: #e3f2fd;
-            color: #1976d2;
+            background-color: #ffffff;
+            color: #000000;
             padding: 0.5rem 1rem;
             border-radius: 2rem;
             font-weight: 600;
         }
+
+.sidebar-header img{
+    margin-left: -105px;
+    margin-bottom: 10px;
+}

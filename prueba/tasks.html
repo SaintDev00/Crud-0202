@@ -6,7 +6,7 @@
     <title>CRUDTASK - My Tasks</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="d-flex">
@@ -19,17 +19,17 @@
             
             <div class="sidebar-menu">
                 <a href="dashboard-user.html">
-                    <i class="fas fa-home me-2"></i>Dashboard
+                    <i></i>Dashboard
                 </a>
                 <a href="tasks.html" class="active">
-                    <i class="fas fa-tasks me-2"></i>My Tasks
+                    <i></i>My Tasks
                 </a>
                 <hr>
                 <a href="profile.html">
-                    <i class="fas fa-user me-2"></i>Profile
+                    <i></i>Profile
                 </a>
-                <a href="#" id="logoutBtn">
-                    <i class="fas fa-sign-out-alt me-2"></i>Logout
+                <a href="index.html" id="logoutBtn">
+                    <i ></i>Logout
                 </a>
             </div>
         </nav>
@@ -41,7 +41,7 @@
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <h1 class="h3">My Tasks</h1>
                     <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createTaskModal">
-                        <i class="fas fa-plus me-1"></i>Create New Task
+                        <i></i>Create New Task
                     </button>
                 </div>
 
@@ -50,7 +50,7 @@
                     <div class="col-md-3">
                         <div class="card">
                             <div class="card-body text-center">
-                                <h2 class="mb-0" id="myTotalTasks">24</h2>
+                                <h2 class="mb-0" id="myTotalTasks"></h2>
                                 <p class="text-muted mb-0">Total Tasks</p>
                             </div>
                         </div>
@@ -58,7 +58,7 @@
                     <div class="col-md-3">
                         <div class="card">
                             <div class="card-body text-center">
-                                <h2 class="mb-0 text-success" id="myCompleted">18</h2>
+                                <h2 class="mb-0 text-success" id="myCompleted"></h2>
                                 <p class="text-muted mb-0">Completed</p>
                             </div>
                         </div>
@@ -66,7 +66,7 @@
                     <div class="col-md-3">
                         <div class="card">
                             <div class="card-body text-center">
-                                <h2 class="mb-0 text-warning" id="myPending">6</h2>
+                                <h2 class="mb-0 text-warning" id="myPending"></h2>
                                 <p class="text-muted mb-0">Pending</p>
                             </div>
                         </div>
@@ -75,7 +75,7 @@
                         <div class="card">
                             <div class="card-body text-center">
                                 <div class="progress" style="height: 20px;">
-                                    <div class="progress-bar bg-success" style="width: 75%"></div>
+                                    <div class="progress-bar bg-info" style="width: 75%"></div>
                                 </div>
                                 <p class="mb-0 mt-2">Overall Progress: 75%</p>
                             </div>
