@@ -21,6 +21,17 @@
       "phone": "+1 (555) 987-6543",
       "employeeId": "CZ-882104",
       "joinDate": "2021-03-22"
+    },
+    {
+      "id": 3,
+      "fullName": "Raj Patel",
+      "email": "raj@crudtask.edu",
+      "password": "password123",
+      "role": "user",
+      "department": "Mathematics",
+      "phone": "+1 (555) 456-7890",
+      "employeeId": "CZ-882105",
+      "joinDate": "2021-08-10"
     }
   ],
   "tasks": [
@@ -30,10 +41,10 @@
       "category": "Mathematics",
       "priority": "High",
       "status": "Pending",
-      "description": "Prepare final exam materials",
+      "description": "Prepare final exam materials for Calculus III",
       "dueDate": "2024-12-15",
-      "userId": 2,
-      "assignee": "Alex Morgan"
+      "userId": 3,
+      "assignee": "Raj Patel"
     },
     {
       "id": 2,
@@ -41,7 +52,7 @@
       "category": "Computer Science",
       "priority": "Medium",
       "status": "In Progress",
-      "description": "Update system documentation",
+      "description": "Update system documentation and API references",
       "dueDate": "2024-11-20",
       "userId": 1,
       "assignee": "Sarah Lin"
@@ -52,10 +63,76 @@
       "category": "Physics",
       "priority": "Medium",
       "status": "Completed",
-      "description": "Complete lab report",
+      "description": "Complete quantum mechanics lab report with analysis",
       "dueDate": "2024-11-10",
       "userId": 2,
       "assignee": "Alex Morgan"
+    },
+    {
+      "id": 4,
+      "title": "History Essay: Industrial Revolution",
+      "category": "History",
+      "priority": "Low",
+      "status": "Completed",
+      "description": "Essay on the impact of Industrial Revolution in Europe",
+      "dueDate": "2024-10-30",
+      "userId": 2,
+      "assignee": "Alex Morgan"
+    },
+    {
+      "id": 5,
+      "title": "Database Systems Project: Phase 1",
+      "category": "Computer Science",
+      "priority": "High",
+      "status": "In Progress",
+      "description": "Design and implement database schema",
+      "dueDate": "2024-12-01",
+      "userId": 1,
+      "assignee": "Carlos M."
+    },
+    {
+      "id": 6,
+      "title": "English Lit: Modernist Poetry",
+      "category": "Literature",
+      "priority": "Medium",
+      "status": "Pending",
+      "description": "Analysis of modernist poetry from 20th century",
+      "dueDate": "2024-11-25",
+      "userId": 3,
+      "assignee": "Raj Patel"
+    },
+    {
+      "id": 7,
+      "title": "Fix Login Authentication",
+      "category": "Computer Science",
+      "priority": "High",
+      "status": "Pending",
+      "description": "Fix authentication bug in login system",
+      "dueDate": "2024-10-22",
+      "userId": 1,
+      "assignee": "Raj Patel"
+    },
+    {
+      "id": 8,
+      "title": "Quarterly Review",
+      "category": "Administration",
+      "priority": "Low",
+      "status": "Completed",
+      "description": "Prepare quarterly performance review reports",
+      "dueDate": "2024-10-20",
+      "userId": 1,
+      "assignee": "Michelle O."
+    },
+    {
+      "id": 9,
+      "title": "Database Optimization",
+      "category": "Computer Science",
+      "priority": "High",
+      "status": "In Progress",
+      "description": "Optimize database queries and indexing",
+      "dueDate": "2024-10-25",
+      "userId": 2,
+      "assignee": "Carlos M."
     }
   ]
 }
